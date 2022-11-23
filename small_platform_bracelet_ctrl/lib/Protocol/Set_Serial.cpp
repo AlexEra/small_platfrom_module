@@ -69,15 +69,15 @@ int16_t Set_Serial::read_command(uint8_t *buf, uint8_t size) {
        buf[CMD] -= 32;
    }
    switch(buf[CMD]){
-        case 'T':
+        case NEW_WHEELS_VELOCITY:
             return 1;
-        case 'C':
+        case PID_COEFFICIENT:
             return 2;
-        case 'F':
+        case CHANGE_DATA_TX_RATE:
             return 3;
-        case 'U':
+        case LIGHT_CONTROL:
             return 4;
-        case 'S':
+        case SERVO_CMD:
             return 5;
         default:
             return NOT_CMD;
