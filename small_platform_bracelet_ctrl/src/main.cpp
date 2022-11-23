@@ -93,7 +93,7 @@ void commands_accomplishing(void) {
             cmd = 0;
             break;
         case 0x01:
-            ledcWrite(CHANNEL_LIGHT, 1024);
+            ledcWrite(CHANNEL_LIGHT, 0);
             engine_left.set_power(0);
             engine_right.set_power(0);
             delay(5000);
